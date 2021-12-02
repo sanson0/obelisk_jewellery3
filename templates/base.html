@@ -67,7 +67,7 @@
         <!--Shopping bag-->
         <div class="col-2 col-md-4">
           <div class="d-flex justify-content-center">
-            <a class="{% if grand_total %} font-weight-bold{% else %} text-dark{% endif %}" href="">
+            <a class="{% if grand_total %} font-weight-bold{% else %} text-dark{% endif %}" href="{% url 'view_bag' %}">
               <div class="text-center">
                 <div class="text-center"><i class="text-dark fas fa-shopping-bag fa-lg"></i></div>
                 <p class="my-0 text-dark">
