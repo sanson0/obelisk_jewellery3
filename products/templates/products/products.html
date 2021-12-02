@@ -1,20 +1,124 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+{% endblock %}
+
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                {{ products }}
+<div class="container-fluid">
+    
+    <div class="row">
+        <div class="product-container col-11 col-sm-10 offset-sm-1">
+            <div class="row mt-1 mb-2"></div>
+            <div class="row">
+                <!-- Each product has image/ information displayed in Bootstrap card form-->
+                {% for product in products %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-4 mt-4">
+                    <div class="card h-100 border-0 mb-1">
+                        {% if product.image %}
+                        <div class="card-img-top">
+                            <a href="#">
+                                <img src="{{ product.image.url }}" alt="{{ product.name }}"
+                                    style="height: 100px; max-width: 200px; overflow: hidden; margin-left: 15px;">
+                            </a>
+                        </div>
+                        {% else %}
+                        <div class="card-img-top">
+                            <a href="#">
+                                <img src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}"
+                                    style="height: 100px; max-width: 200px; overflow: hidden; margin-left: 15px;">
+                            </a>
+                        </div>
+                        {% endif %}
+                        <div class="card-body pb-0">
+                            <div style="height: 50px;">
+                                <h5 class="mb-1">{{ product.name }}</h5>
+                            </div>
+                            {% if product.category %}
+                            <p class="card-text">
+                                <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
+                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
+                                </a>
+                            </p>
+                            {% endif %}
+                            <div style="height: 75px;">
+                                {% if product.description %}
+                                <p class="card-text">{{ product.description }}</p>
+                                {% else %}
+                                <small class="text-muted">No Description</small>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white pt-0 border-0 text-left">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead mb-0 text-left font-weight-bold">£{{ product.price }}</p>
+                                    <!-- Product rating converts into 5 star bar representation (with help from JavaScript below)-->
+                                    {% if product.rating %}
+                                    <span class="stars checked" data-rating="{{ product.rating }}"
+                                        data-num-stars="5"></span>
+                                    <p>Rating {{ product.rating }}/ 5</p>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                    <!-- Superusers only can edit or delete any of the products-->
+                                    {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'edit_product' product.id %}">Edit</a> |
+                                        <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
+                                    </small>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
+</div>
+<!-- Scroll button, so shoppers can move back to the top of the product page easily-->
+<div class="btt-button shadow-sm rounded-0 border border-dark">
+    <a class="btt-link d-flex h-100">
+        <i class="fas fa-arrow-up text-dark mx-auto my-auto"></i>
+    </a>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+<!-- Scroll JQuery enables the scroll button so shoppers can move back to the top of the product page easily-->
+<script type="text/javascript">
+    $('.btt-link').click(function (e) {
+        window.scrollTo(0, 0);
+    });
+</script>
+
+<!-- Rating stars JQuery takes the product rating number from the database and converts it into a five star visual representation-->
+<script>
+    $.fn.stars = function () {
+        return $(this).each(function () {
+            const rating = $(this).data("rating");
+            const numStars = $(this).data("numStars");
+            const fullStar = '<i class="fas fa-star"></i>'.repeat(Math.floor(rating));
+            const halfStar = (rating % 1 !== 0) ? '<i class="fas fa-star-half-alt"></i>' : '';
+            const noStar = '<i class="far fa-star"></i>'.repeat(Math.floor(numStars - rating));
+            $(this).html(`${fullStar}${halfStar}${noStar}`);
+        });
+    };
+</script>
+<script>
+    $(function () {
+        $('.stars').stars();
+    });
+</script>
 {% endblock %}
