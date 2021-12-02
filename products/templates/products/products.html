@@ -14,7 +14,35 @@
 
 {% block content %}
 <div class="container-fluid">
-    
+    <div class="row">
+        <div class="col-3">
+            <!-- Product count displayed-->
+            
+        </div>
+        <div class="col-2 col-md-6"></div>
+        <div class="col-7 col-md-3 mt-3">
+            <!-- Sort select bar, sort based on price, rating and name-->
+            <div class="sort-select-wrapper w-25">
+                <select id="sort-selector"
+                    class="custom-select custom-select-sm rounded-0 border border-dark border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                    <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...
+                    </option>
+                    <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price
+                        (low to high)</option>
+                    <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price
+                        (high to low)</option>
+                    <option value="rating_asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>
+                        Rating (low to high)</option>
+                    <option value="rating_desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>
+                        Rating (high to low)</option>
+                    <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name
+                        (A-Z)</option>
+                    <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name
+                        (Z-A)</option>
+                </select>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <div class="product-container col-11 col-sm-10 offset-sm-1">
             <div class="row mt-1 mb-2"></div>
@@ -102,7 +130,29 @@
         window.scrollTo(0, 0);
     });
 </script>
+<!-- Sort JavaScript enables the sort bar to filter based on name, price and rating-->
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        var selector = $(this);
+        var currentUrl = new URL(window.location);
 
+        var selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            var sort = selectedVal.split("_")[0];
+            var direction = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direction);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    });
+</script>
 <!-- Rating stars JQuery takes the product rating number from the database and converts it into a five star visual representation-->
 <script>
     $.fn.stars = function () {
