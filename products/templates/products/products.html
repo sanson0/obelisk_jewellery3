@@ -17,7 +17,13 @@
     <div class="row">
         <div class="col-3">
             <!-- Product count displayed-->
-            
+            <p class="text-muted mt-3 text-center text-md-left">
+                {% if search_term or current_categories or current_sorting != 'None_None' %}
+                <span class="small"><a href="{% url 'products' %}" class="text-dark">Products Home</a> | </span>
+                {% endif %}
+                {{ products|length }} Products{% if search_term %} found for
+                <strong>"{{ search_term }}"</strong>{% endif %}
+            </p>
         </div>
         <div class="col-2 col-md-6"></div>
         <div class="col-7 col-md-3 mt-3">
