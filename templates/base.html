@@ -111,7 +111,7 @@
         {% if request.user.is_authenticated %}
         <!--Profile link for logged in site users-->
         <div class="col-sm-2 d-flex justify-content-center pb-3">
-          <a class="text-uppercase text-dark text-decoration-none" href="#">
+          <a class="text-uppercase text-dark text-decoration-none" href="{% url 'profile' %}">
             Profile
           </a>
         </div>
