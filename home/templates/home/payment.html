@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col col-10 offset-1">
+            <h2 class="mt-5">Payment methods</h2>
+            <div class="mb-5">
+                <p>
+                    Paypal <i class="fab fa-paypal"></i>
+                </p>
+                <p>
+                    Visa <i class="fab fa-cc-visa"></i>
+                </p>
+                <p>
+                    Mastercard <i class="fab fa-cc-mastercard"></i>
+                </p>
+                <p>
+                    American Express <i class="fab fa-cc-amex"></i>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

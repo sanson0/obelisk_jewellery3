@@ -15,3 +15,15 @@ def contact(request):
 
 def deliver(request):
     return render(request, 'home/deliver.html')
+
+
+def manufacture(request):
+    return render(request, 'home/manufacture.html')
+
+
+def payment(request):
+    return render(request, 'home/payment.html')
+
+
+def refund(request):
+    return render(request, 'home/refund.html')
