@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col col-10 offset-1">
+            <h2 class="mt-5">Delivery Options</h2>
+            <div class="mb-5">
+                <p>
+                    Free Standard Delivery on orders over £{{ free_delivery_threshold }}
+                </p>
+                <p>
+                    Otherwise standard delivery is charged at 10% and takes 5-7 working days
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
