@@ -1,0 +1,387 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col col-10 offset-1">
+      <h2 class="mt-5">Ring Sizes</h2>
+
+      <div class="mt-5">
+        <table id="ring-table">
+          <tr>
+            <th class="tab-padding">Obelisk</th>
+            <th class="tab-padding">Circumference(mm)</th>
+            <th class="tab-padding">UK sizes</th>
+            <th class="tab-padding">US & Canada sizes</th>
+            <th class="tab-padding">EU sizes</th>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">37.8</td>
+            <td class="tab-padding">A</td>
+            <td class="tab-padding">1/2</td>
+            <td class="tab-padding"></td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">39.1</td>
+            <td class="tab-padding">B</td>
+            <td class="tab-padding">1</td>
+            <td class="tab-padding"></td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">40.4</td>
+            <td class="tab-padding">C</td>
+            <td class="tab-padding">1 1/2</td>
+            <td class="tab-padding">40 1/2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">41.7</td>
+            <td class="tab-padding">D</td>
+            <td class="tab-padding">2</td>
+            <td class="tab-padding">41 1/2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">D 1/2</td>
+            <td class="tab-padding">2 1/4></td>
+            <td class="tab-padding">42 1/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">42.9</td>
+            <td class="tab-padding">E</td>
+            <td class="tab-padding">2 1/2</td>
+            <td class="tab-padding">42 3/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">E 1/2</td>
+            <td class="tab-padding">2 3/4</td>
+            <td class="tab-padding">43 3/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">44.2</td>
+            <td class="tab-padding">F</td>
+            <td class="tab-padding">3</td>
+            <td class="tab-padding">44</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">F 1/2</td>
+            <td class="tab-padding">3 1/4</td>
+            <td class="tab-padding">44 5/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">45.5</td>
+            <td class="tab-padding">G</td>
+            <td class="tab-padding">3 1/2</td>
+            <td class="tab-padding">45 1/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">G 1/2</td>
+            <td class="tab-padding">3 3/4</td>
+            <td class="tab-padding">45 7/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">46.8</td>
+            <td class="tab-padding">H</td>
+            <td class="tab-padding">4</td>
+            <td class="tab-padding">46 1/2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">H 1/2</td>
+            <td class="tab-padding">4 1/4</td>
+            <td class="tab-padding"></td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">48.0</td>
+            <td class="tab-padding">I</td>
+            <td class="tab-padding">4 1/2</td>
+            <td class="tab-padding">47 1/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">XS</td>
+            <td class="tab-padding">48.7</td>
+            <td class="tab-padding">J</td>
+            <td class="tab-padding">4 3/4</td>
+            <td class="tab-padding">48 3/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">J 1/2</td>
+            <td class="tab-padding">5</td>
+            <td class="tab-padding">49</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">S</td>
+            <td class="tab-padding">50.0</td>
+            <td class="tab-padding">K</td>
+            <td class="tab-padding">5 1/4</td>
+            <td class="tab-padding">49 5/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">K 1/2</td>
+            <td class="tab-padding">5 1/2</td>
+            <td class="tab-padding">50 1/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">M</td>
+            <td class="tab-padding">51.2</td>
+            <td class="tab-padding">L</td>
+            <td class="tab-padding">5 3/4</td>
+            <td class="tab-padding">50 7/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">L 1/2</td>
+            <td class="tab-padding">6</td>
+            <td class="tab-padding">51 1/2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">L</td>
+            <td class="tab-padding">52.5</td>
+            <td class="tab-padding">M</td>
+            <td class="tab-padding">6 1/4</td>
+            <td class="tab-padding">52 1/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">M 1/2</td>
+            <td class="tab-padding">6 1/2</td>
+            <td class="tab-padding">52 3/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">XL</td>
+            <td class="tab-padding">53.8</td>
+            <td class="tab-padding">N</td>
+            <td class="tab-padding">6 3/4</td>
+            <td class="tab-padding">53 3/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">55.1</td>
+            <td class="tab-padding">O</td>
+            <td class="tab-padding">7</td>
+            <td class="tab-padding">54 5/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">O 1/2</td>
+            <td class="tab-padding">7 1/4</td>
+            <td class="tab-padding">55 1/2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">56.3</td>
+            <td class="tab-padding">P</td>
+            <td class="tab-padding">7 1/2</td>
+            <td class="tab-padding">55 7/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">P 1/2</td>
+            <td class="tab-padding">7 3/4</td>
+            <td class="tab-padding">56 3/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">57.6</td>
+            <td class="tab-padding">Q</td>
+            <td class="tab-padding">8</td>
+            <td class="tab-padding">57 1/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">Q 1/2</td>
+            <td class="tab-padding">8 1/4</td>
+            <td class="tab-padding">58</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">58.9</td>
+            <td class="tab-padding">R</td>
+            <td class="tab-padding">8 1/2</td>
+            <td class="tab-padding">58 3/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">R 1/2</td>
+            <td class="tab-padding">8 3/4</td>
+            <td class="tab-padding">59</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">60.2</td>
+            <td class="tab-padding">S</td>
+            <td class="tab-padding">9</td>
+            <td class="tab-padding">59 5/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">S 1/2</td>
+            <td class="tab-padding">9 1/4</td>
+            <td class="tab-padding">60 1/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">61.4</td>
+            <td class="tab-padding">T</td>
+            <td class="tab-padding">9 3/4</td>
+            <td class="tab-padding">60 7/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">T 1/2</td>
+            <td class="tab-padding">10</td>
+            <td class="tab-padding">61 1/2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">62.7</td>
+            <td class="tab-padding">U</td>
+            <td class="tab-padding">10 1/4</td>
+            <td class="tab-padding">62 1/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">U 1/2</td>
+            <td class="tab-padding">10 1/2</td>
+            <td class="tab-padding">62 3/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">64.0</td>
+            <td class="tab-padding">V</td>
+            <td class="tab-padding">10 3/4</td>
+            <td class="tab-padding">63 3/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">V 1/2</td>
+            <td class="tab-padding">11</td>
+            <td class="tab-padding">63 3/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">65.3</td>
+            <td class="tab-padding">W</td>
+            <td class="tab-padding">11 1/4</td>
+            <td class="tab-padding">64 5/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">W 1/2</td>
+            <td class="tab-padding">11 1/2</td>
+            <td class="tab-padding">65 1/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">66.6</td>
+            <td class="tab-padding">X</td>
+            <td class="tab-padding">11 3/4</td>
+            <td class="tab-padding">65 7/8</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">67.8</td>
+            <td class="tab-padding">Y</td>
+            <td class="tab-padding">12</td>
+            <td class="tab-padding">67 3/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">Y 1/2</td>
+            <td class="tab-padding">12 1/4</td>
+            <td class="tab-padding"></td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">68.5</td>
+            <td class="tab-padding">Z</td>
+            <td class="tab-padding">12 1/2</td>
+            <td class="tab-padding">67 3/4</td>
+          </tr>
+          <tr>
+            <td class="tab-padding"></td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">Z 1/2</td>
+            <td class="tab-padding"></td>
+            <td class="tab-padding">68 3/8</td>
+          </tr>
+        </table>
+
+        <table id="ring-table-mobile">
+          <tr>
+            <th class="tab-padding">Obelisk</th>
+            <th class="tab-padding">Circumference(mm)</th>
+          </tr>
+          <tr>
+            <td class="tab-padding">XS</td>
+            <td class="tab-padding">48.7</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">S</td>
+            <td class="tab-padding">50.0</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">M</td>
+            <td class="tab-padding">51.2</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">L</td>
+            <td class="tab-padding">52.5</td>
+          </tr>
+          <tr>
+            <td class="tab-padding">XL</td>
+            <td class="tab-padding">53.8</td>
+          </tr>
+        </table>
+
+        <h3 class="mt-4 mb-4">More sizes available soon</h3>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

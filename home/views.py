@@ -27,3 +27,11 @@ def payment(request):
 
 def refund(request):
     return render(request, 'home/refund.html')
+
+
+def ring_sizes(request):
+    return render(request, 'home/ring_sizes.html')
+
+
+def ts_and_cs(request):
+    return render(request, 'home/ts_and_cs.html')
