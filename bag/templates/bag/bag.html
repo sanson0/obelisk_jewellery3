@@ -110,7 +110,9 @@
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
+                                        {% for bag in bags %}
+                                        <span class="text-uppercase">Keep shopping {{ bag.bag_message }}</span>
+                                        {% endfor %}
                                     </a>
                                     <a href="{% url 'checkout' %}" class="btn btn-black rounded-0 btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
@@ -128,7 +130,9 @@
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
-                        <span class="text-uppercase">Keep Shopping</span>
+                        {% for bag in bags %}
+                        <span class="text-uppercase">Keep Shopping {{ bag.bag_message }}</span>
+                        {% endfor %}
                     </a>
                 {% endif %}
             </div>

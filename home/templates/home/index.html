@@ -10,6 +10,9 @@
 {% endblock %}
 
 {% block content %}
+{% for bag in bags %}
+<h1 class="text-center"> Shop {{ bag.bag_message }}</h1>
+{% endfor %}
 {% for home_image in home_images %}
     <div class="container">
         <img src="{{ home_image.image_url }}" alt="Apatite necklace" style="width: 100%; height: auto;" class="border border-dark">

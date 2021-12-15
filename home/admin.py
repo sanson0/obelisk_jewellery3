@@ -27,6 +27,7 @@ class Home_imageAdmin(admin.ModelAdmin):
         'image_url',
     )
 
+
 admin.site.register(Contact, ContactAdmin)
 admin.site.register(Refunds, RefundsAdmin)
 admin.site.register(Tandcs, TandcsAdmin)
