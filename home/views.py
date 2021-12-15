@@ -1,12 +1,18 @@
 from django.shortcuts import render
-from .models import Contact, Refunds, Tandcs
+from .models import Contact, Refunds, Tandcs, Home_image
 # Create your views here.
 
 
 def index(request):
     """ A view to return the index page """
 
-    return render(request, 'home/index.html')
+    home_images = Home_image.objects.all()
+
+    context = {
+        'home_images': home_images,
+    }
+
+    return render(request, 'home/index.html', context)
 
 
 def contact(request):

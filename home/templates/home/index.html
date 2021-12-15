@@ -10,7 +10,9 @@
 {% endblock %}
 
 {% block content %}
+{% for home_image in home_images %}
     <div class="container">
-        <img src="https://cdn.pixabay.com/photo/2015/03/12/01/42/apatite-669515_960_720.jpg" alt="Apatite necklace" style="width: 100%; height: auto;" class="border border-dark">
+        <img src="{{ home_image.image_url }}" alt="Apatite necklace" style="width: 100%; height: auto;" class="border border-dark">
     </div>
+    {% endfor %}
 {% endblock %}
