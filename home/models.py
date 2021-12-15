@@ -1,3 +1,24 @@
 from django.db import models
 
-# Create your models here.
+
+class Contact(models.Model):
+    contact_address = models.CharField(max_length=100)
+    contact_phone = models.CharField(max_length=50)
+
+
+class Refunds(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Refunds'
+
+    refund = models.TextField()
+
+
+class Tandcs(models.Model):
+
+    class Meta:
+        verbose_name_plural = 'Tandcs'
+        
+    last_update = models.CharField(max_length=100)
+    terms = models.TextField()
+
