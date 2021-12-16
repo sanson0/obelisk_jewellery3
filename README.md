@@ -36,7 +36,7 @@ The jewellery store Obelisk has been set up to enable shoppers to purchase a ran
 | Shopper | Easily select the size/ quantity of a product when purchasing | Ensure I don't accidentally select the wrong product, quantity or size |
 | Shopper | See what payment methods are valid | Check I have the right payment method |
 # Features
-Features across pages and features for individual pages are listed. A link to the wireframe is provided. The wireframe shows mock-ups of the main pages of the app including views on devices of different screen widths.
+Features across pages and features for individual pages are listed. A link to the [wireframe](docs/obelisk_jewellery_wireframe.pdf) is provided. The wireframe shows mock-ups of the main pages of the app including views on devices of different screen widths.
 ## Features across all pages
 ### Header
 The header contains the
@@ -217,16 +217,16 @@ Our goods are hand crafted to the highest standard. We strive to create quality 
 
 We hope you enjoy your purchases from us!
 # Technologies used
-* HTML
-* CSS
-* JavaScript
-* JQUERY
-* Python
-* Bootstrap
-* Django
-* Stripe
+* [HTML](https://html.com)
+* [CSS](https://www.w3schools.com/Css)
+* [JavaScript](https://www.javascript.com)
+* [Jquery](https://jquery.com)
+* [Python](https://www.python.org)
+* [Bootstrap](https://getbootstrap.com)
+* [Django](https://www.djangoproject.com)
+* [Stripe](https://stripe.com)
 # Deployment
-The deployment process for this project is set out in this link
+The deployment process for this project is set out in this [link](docs/Deployment.pdf)
 # Testing
 ## Manual testing
 See link for explanation of manual testing.
@@ -236,9 +236,9 @@ See this link for results of responsiveness testing.
 The project should be tested on different web browsers eg. Chrome, Avast, Microsoft Bing, Firefox
 ## Testing tools
 Testing tools are listed:-
-* HTML code validator, see results
-* CSS code validator, see results
-* JShint, see results
+* HTML code validator, see [results](docs/HTML_Validation.pdf)
+* CSS code validator, see [results](docs/CSS_Validation.pdf)
+* JShint, see [results](docs/JShint.pdf)
 * Lighthouse performance analysis (in Chrome browser), see results
 # Bugs and improvements
 ## Problem: - toasts not working
