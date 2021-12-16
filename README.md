@@ -149,8 +149,9 @@ This page contains a pre-filled form with the following fields:-
 ## Future Features of the site
 Provide a means of processing Paypal payments as this is a very popular method of payment
 # Data
-## Product data
+## Product app data
 All items will have a: -
+* Category
 * Title
 * Description
 * Rating in terms of 1 to 5 stars
@@ -172,6 +173,38 @@ The site will have the ability to search words in the title and description of e
 The site will contain categories of jewellery. Main categories include necklaces, bracelets, rings, brooches, earrings, combinations (matching necklace, earrings and ring) and sale items The products are all sorted these categories (some will be added to the sale category)
 
 The site has CRUD ability (Create, Read, Update and Delete) because the superusers of the site need to be able to add, update and delete products on the site, plus everyone needs to be able to read data on the site (shoppers as well as superusers).
+## Checkout app data
+All orders will have a: -
+* Order number
+* User profile
+* Full name
+* Email
+* Phone number
+* Country
+* Postcode
+* Town or city
+* Street address
+* County
+* Date
+* Delivery cost
+* Order total
+* Grand total
+## Profile app data
+All profiles will have a:-
+* Street address
+* Town or city
+* County
+* Postcode
+* Country
+* Phone number
+## Home app data
+The home app will contain:-
+* Contact phone number
+* Contact address
+* Refund information
+* Terms and conditions information
+## Bag app data
+* Display message
 ## Databases
 Django officially supports five database backends: PostgreSQL, MySQL, MariaDB, SQLite and Oracle.
 
