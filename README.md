@@ -192,7 +192,7 @@ If the product is damaged in any way, or you have initiated the return after 30 
 
 If anything is unclear or you have more questions feel free to contact our customer support team.
 
-Sample Return and Refund Policy Template [Free Download] from websitepolicies.com
+Sample Return and Refund Policy Template [Free Download](https://www.websitepolicies.com) from websitepolicies.com
 ### Terms & Conditions
 #### What is a Terms and Conditions Agreement?
 A terms and conditions agreement outlines the website administrator’s rules regarding user behaviour, and provides information about the actions the website administrator can and will perform. Your terms and conditions text is a contract between your website and its users. In the event of a legal dispute, arbitrators will look to this agreement to determine whether each party acted within their rights.
@@ -203,7 +203,7 @@ Creating the best terms and conditions page possible will protect your business 
 
 In short, terms and conditions give you control over your site and legal reinforcement if users try to take advantage of your operations.
 
-A generic copy of some terms & conditions is taken from the website 'Termly'
+A generic copy of some terms & conditions is taken from the website [Termly](https://termly.io)
 ## Payment methods
 There are four payment methods: -
 * Paypal
@@ -213,6 +213,7 @@ There are four payment methods: -
 ## Delivery options
 Free Standard Delivery over £50, otherwise standard delivery of 10% This takes 5-7 working days Express Delivery £6 Delivery next working day
 ## Manufacture
+[Image](https://cdn.pixabay.com/photo/2018/03/31/12/23/hand-3278027_960_720.jpg)
 Our goods are hand crafted to the highest standard. We strive to create quality items for every budget. We use a large range of raw materials, particularly gems. This makes our jewellery pieces stand out from the crowd, they are so different from pieces bought from well-known, larger companies.
 
 We hope you enjoy your purchases from us!
@@ -231,7 +232,7 @@ The deployment process for this project is set out in this [link](docs/Deploymen
 ## Manual testing
 See link for explanation of manual testing.
 ## Responsiveness
-See this link for results of responsiveness testing.
+See this [link](docs/Responsive_design.pdf) for results of responsiveness testing.
 ## Web browsers
 The project should be tested on different web browsers eg. Chrome, Avast, Microsoft Bing, Firefox
 ## Testing tools
@@ -239,10 +240,10 @@ Testing tools are listed:-
 * HTML code validator, see [results](docs/HTML_Validation.pdf)
 * CSS code validator, see [results](docs/CSS_Validation.pdf)
 * JShint, see [results](docs/JShint.pdf)
-* Lighthouse performance analysis (in Chrome browser), see results
+* Lighthouse performance analysis (in Chrome browser), see [results](docs/Lighthouse.pdf)
 # Bugs and improvements
 ## Problem: - toasts not working
-It was difficult to get toasts working in this project. All the Bootstrap components are from Bootstrap 5.1 and it is important to keep all components and links consistent. The code can be viewed on this link
+It was difficult to get toasts working in this project. All the Bootstrap components are from Bootstrap 5.1 and it is important to keep all components and links consistent. The solution to the problem is shown in this [link](docs/Toasts.pdf).
 ## Improvement to image layout
 There is a difficulty with very different image sizes for items which could sometimes escape the confines of one product entry and bleed across into other product entries. This was solved by setting limits on the width of each image while restricting the height to the same value for all images. This is an easy problem to fix but makes a big difference to the appearance of the website and takes care of the difficulty of large variations in ratio of height and width of images.
 # Credits
@@ -437,22 +438,18 @@ https://cdn.pixabay.com/photo/2015/03/09/10/05/topaz-665340__340.jpg
 
 Boutique Ado project Chris Z from Code Institute
 
-Stack overflow provided code for the star rating for the products. Stack overflow
+[Stack overflow](https://stackoverflow.com) provided code for the star rating for the products.
 
-Termly terms and conditions website Termly
+Terms and conditions website [Termly](https://termly.io)
 
-Hoverable dropdown menu from W3Schools
+[Tutorials point](https://www.tutorialspoint.com) for Django social media share
 
-Scroll back to top button from W3Schools
+[Diff checker](https://www.diffchecker.com) is useful for debugging as it finds differences between chunks of code.
 
-Tutorials point for Django social media share
+Sample Return and Refund Policy Template [Free Download] from [websitepolicies.com](https://www.websitepolicies.com)
 
-Diff checker is useful for debugging as it finds differences between chunks of code.
+[HTML Validator](https://validator.w3.org)
 
-Sample Return and Refund Policy Template [Free Download] from websitepolicies.com
+[CSS Validator](https://jigsaw.w3.org/css-validator)
 
-HTML Validator
-
-CSS Validator
-
-Lighthouse performance checker in Chrome
+[Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/) performance checker in developer tools in Chrome
