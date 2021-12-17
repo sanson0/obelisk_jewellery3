@@ -263,7 +263,7 @@ We hope you enjoy your purchases from us!
 The deployment process for this project is set out in this [link](docs/Deployment.pdf)
 # Testing
 ## Manual testing
-See link for explanation of manual testing.
+See [link](docs/Manual_testing.pdf) for explanation of manual testing.
 ## Responsiveness
 See this [link](docs/Responsive_design.pdf) for results of responsiveness testing.
 ## Web browsers
