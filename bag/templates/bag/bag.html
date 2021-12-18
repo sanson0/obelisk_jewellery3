@@ -17,6 +17,9 @@
             <div class="col">
                 <hr>
                 <h2 class="logo-font mb-4">Shopping Bag</h2>
+                {% for bag in bags %}
+                <img src="{{ bag.image_url }}" alt="{{ bag.image_description }}" style="max-height: 100px;">
+                {% endfor %}
                 <hr>
             </div>
         </div>
@@ -116,6 +119,9 @@
                 {% endif %}
             </div>
         </div>
+        {% for bag in bags %}
+        <h3 class="fst-italic text-decoration-underline">{{ bag.promotion }}</h3>
+        {% endfor %}
     </div>
 {% endblock %}
 
