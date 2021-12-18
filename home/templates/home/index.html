@@ -16,6 +16,9 @@
 {% for home_image in home_images %}
     <div class="container">
         <img src="{{ home_image.image_url }}" alt="Apatite necklace" style="width: 100%; height: auto;" class="border border-dark">
+        {% if request.user.is_superuser %}
+        <a href="{% url 'admin:index' %}" class="text-dark text-uppercase">Change home image in admin panel 'Home'</a>
+        {% endif %}
     </div>
     {% endfor %}
 {% endblock %}

@@ -120,8 +120,11 @@
             </div>
         </div>
         {% for bag in bags %}
-        <h3 class="fst-italic text-decoration-underline">{{ bag.promotion }}</h3>
+        <h3 class="fst-italic text-decoration-underline mb-2">{{ bag.promotion }}</h3>
         {% endfor %}
+        {% if request.user.is_superuser %}
+        <a href="{% url 'admin:index' %}" class="text-dark text-uppercase">Change image/messages in admin panel 'Bags'</a>
+        {% endif %}
     </div>
 {% endblock %}
 

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Contact, Refunds, Tandcs, Home_image
 from bag.models import Bag
+from .forms import contact, refunds, tandcs, homeImage
 
 
 def index(request):

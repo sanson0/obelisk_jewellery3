@@ -29,5 +29,8 @@
             </div>
         </div>
     </div>
+    {% if request.user.is_superuser %}
+        <a href="{% url 'admin:index' %}" class="text-dark text-uppercase">Change contacts in admin panel 'Home'</a>
+        {% endif %}
 </div>
 {% endblock %}
