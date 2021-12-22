@@ -205,6 +205,8 @@ The home app will contain:-
 * Terms and conditions information
 ## Bag app data
 * Display message
+* Display a seasonal picture
+* Show a promotions message
 ## Databases
 Django officially supports five database backends: PostgreSQL, MySQL, MariaDB, SQLite and Oracle.
 
